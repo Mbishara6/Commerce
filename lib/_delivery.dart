@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class Delivery extends StatefulWidget {
   const Delivery({super.key});
 
@@ -41,6 +40,20 @@ class _DeliveryState extends State<Delivery> {
               Padding(padding: EdgeInsets.all(5.0)),
               Search(),
               Padding(padding: EdgeInsets.all(5.0)),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text("Send a Package.",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Package(),
             ],
           )),
@@ -64,9 +77,9 @@ class _BalanceState extends State<Balance> {
       height: 100,
       width: double.infinity,
       margin: const EdgeInsets.all(30),
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-      ),
+      // padding: const EdgeInsets.symmetric(
+      //   horizontal: 20,
+      // ),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -196,6 +209,8 @@ class Package extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      padding: EdgeInsets.all(10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -307,7 +322,7 @@ class Package extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "Same State",
+                          "Interstate",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -322,7 +337,7 @@ class Package extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "Deliveries within the \n same state.",
+                          "Deliveries outside your \n current state.",
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 12,
@@ -390,7 +405,7 @@ class Package extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "Same State",
+                          "Charter",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -405,7 +420,7 @@ class Package extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "Deliveries within the \n same state.",
+                          "Request a vehicle",
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 12,
@@ -466,7 +481,7 @@ class Package extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "Same State",
+                          "International",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -481,7 +496,7 @@ class Package extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "Deliveries within the \n same state.",
+                          "Send packages to the \n other countries",
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 12,
@@ -512,6 +527,154 @@ class Package extends StatelessWidget {
                     ],
                   ),
                 ]),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Padding(padding: EdgeInsets.all(10),
+              child: Text("Other Actions",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),) ,),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: 143,
+                width: 186,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade200,
+                      offset: Offset(5.0, 5.0),
+                      blurRadius: 5.0,
+                      spreadRadius: 1.0,
+                    ),
+                    BoxShadow(
+                      color: Colors.grey.shade200,
+                      offset: Offset(-5.0, -5.0),
+                      blurRadius: 15.0,
+                      spreadRadius: 1.0,
+                    ),
+                  ],
+                ),
+                child: Column(children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(top: 10, right: 20, left: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Waybill History",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20, left: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Records of all your \n waybill.",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.arrow_circle_right),
+                        iconSize: 16,
+                        color: Color(0xFF46A5BA),
+                      ),
+                    ],
+                  ),
+                ]),
+              ),
+              Container(
+                height: 143,
+                width: 186,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade200,
+                      offset: Offset(5.0, 5.0),
+                      blurRadius: 5.0,
+                      spreadRadius: 1.0,
+                    ),
+                    BoxShadow(
+                      color: Colors.grey.shade200,
+                      offset: Offset(-5.0, -5.0),
+                      blurRadius: 15.0,
+                      spreadRadius: 1.0,
+                    ),
+                  ],
+                ),
+                child: Column(children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(top: 10, right: 20, left: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Get Help",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20, left: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Get help & support \n from all our team ",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.arrow_circle_right),
+                        iconSize: 16,
+                        color: Color(0xFF46A5BA),
+                      ),
+                    ],
+                  ),
+                ],
+                ),
               ),
             ],
           ),
