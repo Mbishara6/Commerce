@@ -1,8 +1,7 @@
-
-import 'package:commerce/validation.dart';
+import 'package:commerce/models/validation.dart';
 import 'package:flutter/material.dart';
-import 'main.dart';
-class login extends StatelessWidget {
+
+import '../main.dart';class login extends StatelessWidget {
   const login ({super.key, required String data});
 
   @override

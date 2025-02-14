@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '_delivery.dart';
+
+import '../_delivery.dart';
 
 class Congratulation extends StatefulWidget {
   const Congratulation({super.key});
